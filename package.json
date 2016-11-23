@@ -1,0 +1,8 @@
+{
+  "name": "lancers-redux-app-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:LancersDevTeam/lancers-redux-app-boilerplate.git",
+  "author": "mori-dev <mori.dev.asdf@gmail.com>",
+  "license": "MIT"
+}
