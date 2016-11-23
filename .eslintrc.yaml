@@ -1,0 +1,130 @@
+---
+parser: babel-eslint
+plugins:
+-   react
+-   flowtype
+-   babel
+extends:
+-   eslint:recommended
+-   plugin:react/recommended
+-   airbnb
+env:
+    browser: true
+    es6: true
+parserOptions:
+    ecmaFeatures:
+        jsx: true
+        modules: true
+globals:
+    require: true
+    "$": true
+    module: true
+    describe: true
+    # for unit_test
+    it: true
+    before: true
+    beforeEach: true
+    after: true
+    afterEach: true
+rules:
+    no-unused-expressions: 0    # hoge && hoge.fuga() とかけるようにした
+    react/require-extension: 0  # deprecated メッセージ対策
+    import/extensions: 2        # deprecated メッセージ対策
+    no-constant-condition: 0
+    react/jsx-filename-extension: 0
+    import/no-extraneous-dependencies: 0
+    no-extra-boolean-cast: 0
+    import/prefer-default-export: 0
+    no-param-reassign: 0
+    no-class-assign: 0  # redux-form 用に制約をゆるめた
+    no-cond-assign: 0
+    react/jsx-no-bind: 0
+    react/sort-comp: 1
+    no-console: 0
+    spaced-comment: 1
+    no-new: 0
+    react/jsx-indent: 0
+    react/jsx-indent-props: 0
+    react/jsx-boolean-value: 0
+    react/prefer-stateless-function: 0
+    arrow-body-style: 0
+    object-curly-spacing: 2
+    indent:
+    -   1
+    -   4
+    -   SwitchCase: 1
+    prefer-const: 2
+    react/display-name: 1
+    semi: 0
+    comma-spacing:
+    -   2
+    -   before: false
+        after: true
+    comma-style:
+    -   2
+    -   last
+    computed-property-spacing:
+    -   2
+    -   never
+    eol-last: 2
+    id-blacklist:
+    -   2
+    -   abcdefg
+    key-spacing: 1
+    keyword-spacing:
+    -   2
+    -   before: true
+        after: true
+        overrides: {}
+    linebreak-style: 2
+    max-depth:
+    -   2
+    -   4
+    max-len:
+    -   1
+    -   code: 190
+        tabWidth: 4
+        ignoreUrls: true
+    max-nested-callbacks:
+    -   2
+    -   3
+    max-params:
+    -   1
+    -   5
+    no-mixed-spaces-and-tabs:
+    -   2
+    -   smart-tabs
+    no-multiple-empty-lines:
+    -   2
+    -   max: 3
+        maxEOF: 1
+    no-nested-ternary: 2
+    no-new-object: 2
+    no-restricted-syntax:
+    -   2
+    -   WithStatement
+    no-spaced-func: 2
+    no-underscore-dangle:
+    -   1
+    -   allowAfterThis: true
+        allow:
+        -   _orderWorkList
+        -   _extend
+    no-unused-vars:
+    -   1
+    -   vars: all
+        args: none
+    class-methods-use-this: 0 # this を使わないクラスメソッドを利用したいので許容する
+    # 以下 flow 関係の lint ルールを設定
+    flowtype/define-flow-type: 1
+    flowtype/use-flow-type: 1
+    babel/generator-star-spacing: 0
+    babel/new-cap: 1
+    babel/array-bracket-spacing: 1
+    babel/object-curly-spacing: 0
+    babel/object-shorthand: 1
+    babel/no-await-in-loop: 1
+    babel/flow-object-type: 1
+    # 以下 ESLintのルールを優先するために無効にする
+    babel/func-params-comma-dangle: 0
+    babel/arrow-parens: 0
