@@ -1,0 +1,53 @@
+[ignore]
+
+# 最低限必要な ignore 設定
+.*/node_modules/config-chain/*
+.*/node_modules/fbjs/*
+.*/node_modules/karma-phantomjs2-launcher/*
+.*/node_modules/npm/*
+
+# 型チェックが無意味そうなファイル
+.*/cssstyle*
+.*/empower*
+.*/enzyme*
+.*/node_modules/babel-plugin-espower/*
+.*/node_modules/eslint*
+.*/node_modules/espower*
+.*/node_modules/espurify/*
+.*/node_modules/gulp-*
+.*/node_modules/karma*
+.*/node_modules/phantomjs-*
+.*/node_modules/postcss*
+.*/node_modules/power-assert*
+.*/node_modules/shelljs/*
+.*/node_modules/sinon/*
+.*/node_modules/webpack*
+.*/platforms/*
+.*/test/*
+
+# 型チェックしなくてもよさそうなファイル
+.*/node_modules/react-motion*
+.*/node_modules/react-swipeable-views*
+.*/node_modules/lodash*
+.*/node_modules/log4js*
+.*/node_modules/rx/*
+.*/node_modules/svgo*
+.*/node_modules/uglify-*
+dist/*
+www/js/*
+
+[include]
+
+[libs]
+
+[options]
+module.system=node
+esproposal.class_instance_fields=enable
+esproposal.class_static_fields=enable
+esproposal.decorators=ignore
+esproposal.export_star_as=ignore
+suppress_comment= \\(.\\|\n\\)*\\flow-disable-line
+
+module.name_mapper.extension='css' -> '<PROJECT_ROOT>/flow/CSSModule.js.flow'
+module.name_mapper.extension='png' -> '<PROJECT_ROOT>/flow/WebpackAsset.js.flow'
+module.name_mapper.extension='jpg' -> '<PROJECT_ROOT>/flow/WebpackAsset.js.flow'
