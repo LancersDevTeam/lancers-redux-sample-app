@@ -39,6 +39,7 @@
     "mocha": "^3.1.2",
     "phantomjs-prebuilt": "^2.1.13",
     "power-assert": "^1.4.2",
+    "react-addons-test-utils": "^15.4.1",
     "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
