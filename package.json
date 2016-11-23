@@ -7,6 +7,11 @@
   "license": "MIT",
   "scripts": {
     "typecheck": "./node_modules/.bin/flow check"
+      "lint": "./node_modules/.bin/eslint ./src",
+      "lint:src": "./node_modules/.bin/eslint ./src",
+      "lint:test": "./node_modules/.bin/eslint ./test",
+      "lint:src:fix": "./node_modules/.bin/eslint --fix ./src",
+      "lint:test:fix": "./node_modules/.bin/eslint --fix ./test"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
