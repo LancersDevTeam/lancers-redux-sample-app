@@ -1,0 +1,16 @@
+{
+  "presets": [
+    "react",
+    "es2015",
+    "stage-0"
+  ],
+  "passPerPreset": true,
+  "plugins": [
+    "syntax-flow",
+    "transform-flow-strip-types",
+    "transform-node-env-inline",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-inline-environment-variables",
+  ]
+}
