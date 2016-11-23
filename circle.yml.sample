@@ -1,0 +1,19 @@
+machine:
+  node:
+    version: 6.7.0
+  timezone: Asia/Tokyo
+  post:
+    - npm install -g npm@3.10.7
+    - npm install -g yarn@0.17.6
+dependencies:
+  cache_directories:
+    - "~/.yarn-cache"
+  pre:
+    - yarn --version
+  override:
+    - yarn install
+test:
+  override:
+    - npm run lint
+    - npm run typecheck
+    - npm run test
