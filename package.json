@@ -22,6 +22,9 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-preset-stage-1": "^6.16.0",
-    "babel-register": "^6.18.0"
+    "babel-register": "^6.18.0",
+    "flow-bin": "^0.35.0",
+    "flow-status-webpack-plugin": "^0.1.7",
+    "flowtype": "^2.0.0"
   }
 }

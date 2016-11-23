@@ -763,6 +763,10 @@ call-matcher@^1.0.0:
     espurify "^1.6.0"
     estraverse "^4.0.0"
 
+"cell@github:jkroso/cell":
+  version "1.0.2"
+  resolved "https://codeload.github.com/jkroso/cell/tar.gz/6db4991ebff09e344d7c1211c4abdcc62aff479e"
+
 chalk@^1.1.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-1.1.3.tgz#a8115c55e4a702fe4d150abd3872822a7e09fc98"
@@ -851,6 +855,23 @@ find-up@^1.0.0:
     path-exists "^2.0.0"
     pinkie-promise "^2.0.0"
 
+flow-bin@^0.35.0:
+  version "0.35.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.35.0.tgz#63d4eb9582ce352541be98e6a424503217141b07"
+
+flow-status-webpack-plugin@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/flow-status-webpack-plugin/-/flow-status-webpack-plugin-0.1.7.tgz#425a6cdf3763a8aeef3dff203e5127b919bd104a"
+  dependencies:
+    shelljs "^0.6.0"
+
+flowtype@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/flowtype/-/flowtype-2.0.0.tgz#8636bcb267659ff2ed575cd8bfb36372b90311a2"
+  dependencies:
+    merge yields/merge
+    viewport "2"
+
 globals@^9.0.0:
   version "9.14.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-9.14.0.tgz#8859936af0038741263053b39d0e76ca241e4034"
@@ -922,6 +943,10 @@ loose-envify@^1.0.0:
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.0.tgz#6b26248c42f6d4fa4b0d8542f78edfcde35642a8"
   dependencies:
     js-tokens "^2.0.0"
+
+"merge@github:yields/merge":
+  version "1.0.1"
+  resolved "https://codeload.github.com/yields/merge/tar.gz/2f357cb501cd06f1a86394b7817e5df73c53f644"
 
 minimatch@^3.0.2:
   version "3.0.3"
@@ -1021,6 +1046,10 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
+shelljs@^0.6.0:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.6.1.tgz#ec6211bed1920442088fe0f70b2837232ed2c8a8"
+
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -1048,6 +1077,12 @@ supports-color@^2.0.0:
 to-fast-properties@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-1.0.2.tgz#f3f5c0c3ba7299a7ef99427e44633257ade43320"
+
+viewport@2:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/viewport/-/viewport-2.0.1.tgz#8f5e39fcf5b58f839366314cd6914af9400912a4"
+  dependencies:
+    cell jkroso/cell
 
 xtend@^4.0.0:
   version "4.0.1"
