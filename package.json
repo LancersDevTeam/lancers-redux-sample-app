@@ -5,6 +5,9 @@
   "repository": "git@github.com:LancersDevTeam/lancers-redux-app-boilerplate.git",
   "author": "mori-dev <mori.dev.asdf@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "typecheck": "./node_modules/.bin/flow check"
+  },
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.1",
