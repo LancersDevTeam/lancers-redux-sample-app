@@ -24,6 +24,7 @@
     "babel-preset-stage-1": "^6.16.0",
     "babel-register": "^6.18.0",
     "css-loader": "^0.26.0",
+    "dotenv": "^2.0.0",
     "enzyme": "^2.6.0",
     "eslint": "^3.10.2",
     "eslint-config-airbnb": "^13.0.0",
