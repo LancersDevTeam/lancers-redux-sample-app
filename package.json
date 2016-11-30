@@ -11,7 +11,9 @@
     "lint:src": "./node_modules/.bin/eslint ./src",
     "lint:test": "./node_modules/.bin/eslint ./test",
     "lint:src:fix": "./node_modules/.bin/eslint --fix ./src",
-    "lint:test:fix": "./node_modules/.bin/eslint --fix ./test"
+    "lint:test:fix": "./node_modules/.bin/eslint --fix ./test",
+    "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.development.js --progress --color --hot",
+    "build:prod:ios": "rm -rf ./www/js/* && NODE_ENV=production webpack --config webpack.config.production.js --progress --color"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -61,7 +63,8 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2",
-    "webpack-merge": "^0.17.0"
+    "webpack-merge": "^0.17.0",
+    "write-file-webpack-plugin": "^3.4.2"
   },
   "dependencies": {
     "deep-equal": "^1.0.1",
