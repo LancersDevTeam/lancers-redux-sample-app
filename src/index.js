@@ -22,6 +22,7 @@ ReactDOM.render(
             <Router history={history}>
                 <Route path="/" component={MainContainer} >
                     <IndexRoute component={HomeContainer} />
+                    <Route path="/home" component={HomeContainer} />
                 </Route>
             </Router>
         </MuiThemeProvider>

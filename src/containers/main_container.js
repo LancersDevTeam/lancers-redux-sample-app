@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import AppBar from 'material-ui/AppBar';
+import { Link } from 'react-router';
 
 function mapStateToProps(state: Object): Object {
     return {};
@@ -19,6 +20,7 @@ class MainContainer extends Component {
         return (
             <div>
                 <AppBar title={'MainContainer'} />
+                <Link to={'/home'}> /home へ遷移 </Link>
                 {this.props.children}
             </div>
         );
