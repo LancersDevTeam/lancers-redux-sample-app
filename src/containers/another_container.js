@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ApiCallResultComponent from '../components/api_call_result_component';
 
 function mapStateToProps(state: Object): Object {
     return {};
@@ -16,6 +17,7 @@ class AnotherContainer extends Component {
         return (
             <div>
                 <h1>AnotherContainer</h1>
+                <ApiCallResultComponent />
             </div>
         );
     }
