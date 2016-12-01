@@ -9,6 +9,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './store/configure_store';
 import MainContainer from './containers/main_container';
 import HomeContainer from './containers/home_container';
+import AnotherContainer from './containers/another_container';
 
 export const store = configureStore();
 const history = syncHistoryWithStore(hashHistory, store);
@@ -23,6 +24,7 @@ ReactDOM.render(
                 <Route path="/" component={MainContainer} >
                     <IndexRoute component={HomeContainer} />
                     <Route path="/home" component={HomeContainer} />
+                    <Route path="/another" component={AnotherContainer} />
                 </Route>
             </Router>
         </MuiThemeProvider>
