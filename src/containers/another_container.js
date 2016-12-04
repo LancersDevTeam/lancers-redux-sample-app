@@ -1,23 +1,35 @@
 // @flow
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ApiCallResultComponent from '../components/api_call_result_component';
+import * as qiitaUsersActions from '../actions/qiita_users_action';
 
 function mapStateToProps(state: Object): Object {
-    return {};
+    return {
+        qiitaUsers: state.qiitaUsers,
+    };
 }
 
 function mapDispatchToProps(dispatch: Function): Object {
-    return {};
+    return {
+        qiitaUsersActions: bindActionCreators(qiitaUsersActions, dispatch),
+    };
 }
 
 class AnotherContainer extends Component {
-    props: {};
+    componentWillMount() {
+        this.props.qiitaUsersActions.getQiitaUsersStart();
+    }
+    props: {
+        qiitaUsersActions: any;
+        qiitaUsers: any;
+    };
     render() {
         return (
             <div>
                 <h1>AnotherContainer</h1>
-                <ApiCallResultComponent />
+                <ApiCallResultComponent qiitaUsers={this.props.qiitaUsers} />
             </div>
         );
     }
