@@ -1,3 +1,4 @@
+// @flow
 import { createStore, applyMiddleware, compose } from 'redux';
 import createLogger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
@@ -16,7 +17,7 @@ const enhancer = compose(
     ),
 );
 
-function configureStore(initialState) {
+function configureStore(initialState: any) {
     const store = createStore(rootReducer, initialState, enhancer);
     sagaMiddleware.run(rootSaga);
     return store;

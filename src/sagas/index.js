@@ -1,10 +1,10 @@
 // @flow
 import 'babel-polyfill';
-// import { fork } from 'redux-saga/effects';
-// import { watchFoo } from './foo';
+import { fork } from 'redux-saga/effects';
+import { watchQiitaUsers } from './qiita_users_saga';
 
 export default function* rootSaga(): Generator<any, any, any> {
     yield [
-        // fork(watchFoo),
+        fork(watchQiitaUsers),
     ];
 }

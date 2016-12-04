@@ -1,0 +1,4 @@
+// @flow
+export const GET_QIITA_USERS_START = 'GET_QIITA_USERS_START';
+export const GET_QIITA_USERS_OK = 'GET_QIITA_USERS_OK';
+export const GET_QIITA_USERS_NG = 'GET_QIITA_USERS_NG';
