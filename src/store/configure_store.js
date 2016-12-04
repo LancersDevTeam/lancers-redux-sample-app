@@ -7,6 +7,7 @@ import { browserHistory } from 'react-router';
 import rootSaga from '../sagas/index';
 import rootReducer from '../reducers';
 import responseCamelizer from '../middleware/response_camelizer';
+import requestDecamelizer from '../middleware/request_decamelizer';
 
 const routing = routerMiddleware(browserHistory);
 const sagaMiddleware = createSagaMiddleware();
@@ -15,6 +16,7 @@ const enhancer = compose(
         routing,
         sagaMiddleware,
         responseCamelizer,
+        requestDecamelizer,
         createLogger(),
     ),
 );
