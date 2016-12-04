@@ -8,7 +8,6 @@ import Api from '../services/api';
 export function* getQiitaUsers(action: any): Generator<any, any, any> {
     try {
         const response: any = yield call(Api.getQiitaUsers, action.payload, action.meta);
-        console.log('response:::::::::::::::', response.body);
         const payload = response.body;
         const meta = { statusCode: response.statusCode }
         yield put(getQiitaUsersOk(payload, meta));
