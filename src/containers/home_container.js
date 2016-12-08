@@ -1,6 +1,8 @@
 // @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { compose } from 'redux';
+import loggedInRequired from './common/logged_in_required';
 
 function mapStateToProps(state: Object): Object {
     return {};
@@ -21,4 +23,9 @@ class HomeContainer extends Component {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);
+HomeContainer = compose(
+    loggedInRequired,
+    connect(mapStateToProps, mapDispatchToProps),
+)(HomeContainer)
+
+export default HomeContainer;
