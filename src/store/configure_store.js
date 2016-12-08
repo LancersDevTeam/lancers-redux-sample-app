@@ -6,14 +6,16 @@ import { routerMiddleware } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 import rootSaga from '../sagas/index';
 import rootReducer from '../reducers';
-import responseCamelizer from '../middleware/response_camelizer';
-import requestDecamelizer from '../middleware/request_decamelizer';
+import responseCamelizer from '../middlewares/response_camelizer';
+import requestDecamelizer from '../middlewares/request_decamelizer';
+import networkStatusChecker from '../middlewares/network_status_checker';
 
 const routing = routerMiddleware(browserHistory);
 const sagaMiddleware = createSagaMiddleware();
 const enhancer = compose(
     applyMiddleware(
         routing,
+        networkStatusChecker, // sagaMiddleware より前に置かないと _START をキャンセルしても API コールが行われる
         sagaMiddleware,
         responseCamelizer,
         requestDecamelizer,
