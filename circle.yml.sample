@@ -4,7 +4,7 @@ machine:
   timezone: Asia/Tokyo
   post:
     - npm install -g npm@3.10.7
-    - npm install -g yarn@0.17.6
+    - npm install -g yarn@0.18.1
 dependencies:
   cache_directories:
     - "~/.yarn-cache"
