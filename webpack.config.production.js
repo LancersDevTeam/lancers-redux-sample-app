@@ -7,6 +7,10 @@ const config = merge(baseConfig, {
         configFile: './.eslintrc.yaml',
         fix: false,
     },
+    devtool: 'source-map',
+    output: {
+        sourceMapFilename: 'bundle.js.map',
+    },
 });
 
 module.exports = config;
