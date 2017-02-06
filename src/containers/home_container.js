@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import loggedInRequired from './common/logged_in_required';
-/* eslint-disable no-unused-vars */
-import home from './home.css';
+import './home.css';
 
 function mapStateToProps(state: Object): Object {
     return {};
@@ -18,7 +17,7 @@ class HomeContainer extends Component {
     props: {};
     render() {
         return (
-            <div styleName="home.container">
+            <div styleName="container">
                 <h1>HomeContainer</h1>
             </div>
         );
