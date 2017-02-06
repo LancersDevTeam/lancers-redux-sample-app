@@ -28,10 +28,6 @@ const config = {
                 test: /\.css$/,
                 use: ['style-loader', 'css?modules'],
             },
-            {
-                test: /\.json$/,
-                use: 'json-loader',
-            },
         ],
     },
     eslint: {
