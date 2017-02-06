@@ -11,35 +11,32 @@ const config = {
         filename: 'bundle.js',
     },
     module: {
-        preLoaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loader: 'eslint-loader',
                 exclude: /node_modules/,
+                enforce: 'pre',
+                use: [{
+                    loader: 'eslint-loader',
+                    options: {
+                        configFile: './.eslintrc.yaml',
+                        fix: true,
+                    },
+                }],
             },
-        ],
-        loaders: [
             {
                 test: /\.js$/,
-                loader: 'babel',
+                use: 'babel-loader',
                 exclude: /node_modules/,
             },
             {
                 test: /\.css$/,
-                loaders: ['style', 'css?modules'],
-            },
-            {
-                test: /\.json$/,
-                loader: 'json',
+                use: ['style-loader', 'css?modules'],
             },
         ],
     },
-    eslint: {
-        configFile: './.eslintrc.yaml',
-        fix: true,
-    },
     plugins: [
-        new webpack.NoErrorsPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
         new FlowStatusWebpackPlugin({
             binaryPath: './node_modules/.bin/flow',
             failOnError: true,

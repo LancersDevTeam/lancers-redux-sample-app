@@ -62,13 +62,14 @@
     "react-addons-test-utils": "^15.4.2",
     "sinon": "^1.17.7",
     "style-loader": "^0.13.1",
-    "webpack": "^1.14.0",
+    "webpack": "^2.2.1",
     "webpack-dev-server": "^1.16.2",
     "webpack-merge": "^2.6.1",
     "write-file-webpack-plugin": "^3.4.2"
   },
   "dependencies": {
     "deep-equal": "^1.0.1",
+    "extract-text-webpack-plugin": "2.0.0-rc.3",
     "humps": "^2.0.0",
     "lodash": "^4.17.4",
     "material-ui": "^0.16.7",
