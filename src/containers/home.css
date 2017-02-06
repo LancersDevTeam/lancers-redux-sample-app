@@ -1,0 +1,5 @@
+@value primary1Color, primary2Color from "../css/color.css";
+
+.container {
+    color: primary2Color;
+}
