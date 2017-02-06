@@ -36,7 +36,7 @@ const config = {
         ],
     },
     plugins: [
-        new webpack.NoErrorsPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
         new FlowStatusWebpackPlugin({
             binaryPath: './node_modules/.bin/flow',
             failOnError: true,
