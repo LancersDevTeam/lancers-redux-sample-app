@@ -18,7 +18,10 @@ const config = {
                 enforce: 'pre',
                 use: [{
                     loader: 'eslint-loader',
-                    options: {},
+                    options: {
+                        configFile: './.eslintrc.yaml',
+                        fix: true,
+                    },
                 }],
             },
             {
@@ -31,10 +34,6 @@ const config = {
                 use: ['style-loader', 'css?modules'],
             },
         ],
-    },
-    eslint: {
-        configFile: './.eslintrc.yaml',
-        fix: true,
     },
     plugins: [
         new webpack.NoErrorsPlugin(),
