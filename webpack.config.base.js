@@ -14,23 +14,23 @@ const config = {
         preLoaders: [
             {
                 test: /\.js$/,
-                loader: 'eslint-loader',
+                use: 'eslint-loader',
                 exclude: /node_modules/,
             },
         ],
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loader: 'babel',
+                use: 'babel',
                 exclude: /node_modules/,
             },
             {
                 test: /\.css$/,
-                loaders: ['style', 'css?modules'],
+                use: ['style', 'css?modules'],
             },
             {
                 test: /\.json$/,
-                loader: 'json',
+                use: 'json',
             },
         ],
     },
