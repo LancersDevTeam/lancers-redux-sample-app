@@ -31,7 +31,10 @@ const config = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css?modules'],
+                use: [
+                    'style-loader',
+                    'css-loader?importLoader=1&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
+                ],
             },
         ],
     },

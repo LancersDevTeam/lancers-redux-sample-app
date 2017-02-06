@@ -13,5 +13,6 @@
     "transform-class-properties",
     "transform-inline-environment-variables",
     "babel-plugin-espower",
+    "babel-plugin-react-css-modules",
   ]
 }
