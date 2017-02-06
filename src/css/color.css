@@ -1,0 +1,18 @@
+/*
+Usage
+
+    @value primary1Color, primary2Color from "../../css/color.css";
+
+    .orderContainer {
+        color: primary2Color;
+        background-color: primary1Color;
+    }
+*/
+@value primary1Color: #0054A7;
+@value primary2Color: #0086D1;
+@value primary3Color: #888888;
+@value accent1Color: #B41C12;
+@value accent2Color: #555555;
+@value accent3Color: #888888;
+@value borderColor: #E8E8E8;
+@value backgroundColor: #F2F2F2;
