@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const FlowStatusWebpackPlugin = require('flow-status-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 require('dotenv').config();
 
@@ -31,10 +32,10 @@ const config = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader?importLoader=1&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
-                ],
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: 'css-loader?importLoader=1&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+                })
             },
         ],
     },
@@ -49,6 +50,7 @@ const config = {
                 'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
             },
         }),
+        new ExtractTextPlugin({ filename: 'bundle.css', allChunks: true }),
     ],
 };
 
