@@ -11,14 +11,16 @@ const config = {
         filename: 'bundle.js',
     },
     module: {
-        preLoaders: [
+        rules: [
             {
                 test: /\.js$/,
-                use: 'eslint-loader',
                 exclude: /node_modules/,
+                enforce: 'pre',
+                use: [{
+                    loader: 'eslint-loader',
+                    options: {},
+                }],
             },
-        ],
-        rules: [
             {
                 test: /\.js$/,
                 use: 'babel-loader',
