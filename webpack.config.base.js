@@ -21,16 +21,16 @@ const config = {
         rules: [
             {
                 test: /\.js$/,
-                use: 'babel',
+                use: 'babel-loader',
                 exclude: /node_modules/,
             },
             {
                 test: /\.css$/,
-                use: ['style', 'css?modules'],
+                use: ['style-loader', 'css?modules'],
             },
             {
                 test: /\.json$/,
-                use: 'json',
+                use: 'json-loader',
             },
         ],
     },
