@@ -14,6 +14,7 @@ dependencies:
     - yarn install
 test:
   override:
-    - npm run lint
-    - npm run typecheck
-    - npm run test
+    - yarn lint
+    - yarn typecheck
+    - yarn stylelint
+    - yarn test

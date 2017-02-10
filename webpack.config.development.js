@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const path = require('path');
 const WriteFilePlugin = require('write-file-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const baseConfig = require('./webpack.config.base.js');
 
 const config = merge.smart(baseConfig, {
@@ -29,6 +30,7 @@ const config = merge.smart(baseConfig, {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
+        new StyleLintPlugin({ files: 'src/**/*.css' }),
         new WriteFilePlugin(),
     ],
 });
