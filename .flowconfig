@@ -5,6 +5,7 @@
 .*/node_modules/fbjs/*
 .*/node_modules/karma-phantomjs2-launcher/*
 .*/node_modules/npm/*
+.*/node_modules/stylelint/*
 
 # 型チェックが無意味そうなファイル
 .*/cssstyle*
