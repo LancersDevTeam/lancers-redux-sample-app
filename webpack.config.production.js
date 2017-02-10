@@ -4,9 +4,22 @@ const merge = require('webpack-merge');
 const baseConfig = require('./webpack.config.base.js');
 
 const config = merge(baseConfig, {
-    eslint: {
-        configFile: './.eslintrc.yaml',
-        fix: false,
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                use: [{
+                    loader: 'eslint-loader',
+                    options: {
+                        configFile: path.resolve(__dirname, '.eslintrc.yaml'),
+                        fix: false,
+                    }
+                }],
+                enforce: 'pre',
+                include: [ path.resolve(__dirname, 'src') ],
+                exclude: [ /node_modules/, /test/ ],
+            },
+        ],
     },
     devtool: 'source-map',
     output: {
