@@ -13,7 +13,7 @@
     "lint:src:fix": "./node_modules/.bin/eslint --fix ./src",
     "lint:test:fix": "./node_modules/.bin/eslint --fix ./test",
     "gen:sourcemap": "NODE_ENV=production webpack --config webpack.config.production.js --progress --color",
-    "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.development.js --progress --color --hot",
+    "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.development.js --progress --color",
     "build:prod:ios": "rm -rf ./www/js/* && NODE_ENV=production webpack --config webpack.config.production.js --progress --color"
   },
   "devDependencies": {
