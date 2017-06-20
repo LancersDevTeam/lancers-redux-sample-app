@@ -5,7 +5,7 @@ import qiitaUsers from './qiita_users_reducer';
 
 const rootReducer = combineReducers({
     qiitaUsers,
-    routing: routerReducer,
+    router: routerReducer,
 });
 
 export default rootReducer;

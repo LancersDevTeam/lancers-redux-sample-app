@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import AppBar from 'material-ui/AppBar';
-import { Link } from 'react-router';
 import { List, ListItem } from 'material-ui/List';
 
 function mapStateToProps(state: Object): Object {
@@ -22,8 +21,8 @@ class MainContainer extends Component {
             <div>
                 <AppBar title={'MainContainer'} />
                 <List>
-                    <ListItem><Link to={'/home'}> /home へ遷移して HomeContainer をマウント </Link></ListItem>
-                    <ListItem><Link to={'/another'}> /another へ遷移して AnotherContainer をマウント </Link></ListItem>
+                    <ListItem><a href="#/home"> /home へ遷移して HomeContainer をマウント </a></ListItem>
+                    <ListItem><a href="#/another"> /another へ遷移して AnotherContainer をマウント </a></ListItem>
                 </List>
                 {this.props.children}
             </div>
